@@ -5,12 +5,24 @@ import { linkWhatsapp } from "@/content/sitio";
 import { IconoWhatsapp } from "./Iconos";
 
 /**
- * Botón flotante de WhatsApp. Se corre de lugar (se esconde) solo mientras
- * pasa por encima de otro botón o link, para no taparlo.
+ * Botón flotante de WhatsApp. Aparece recién después del inicio y se esconde
+ * mientras pasa por encima de otro botón o link, para no taparlo.
  */
 export function BotonFlotante() {
   const ref = useRef<HTMLAnchorElement>(null);
   const [tapa, setTapa] = useState(false);
+  const [pasoInicio, setPasoInicio] = useState(false);
+
+  useEffect(() => {
+    const inicio = document.getElementById("inicio");
+    if (!inicio || !("IntersectionObserver" in window)) {
+      const r = requestAnimationFrame(() => setPasoInicio(true));
+      return () => cancelAnimationFrame(r);
+    }
+    const obs = new IntersectionObserver(([e]) => setPasoInicio(!e.isIntersecting && e.boundingClientRect.top < 0));
+    obs.observe(inicio);
+    return () => obs.disconnect();
+  }, []);
 
   useEffect(() => {
     let cuadro = 0;
@@ -58,9 +70,10 @@ export function BotonFlotante() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escribime por WhatsApp"
-      tabIndex={tapa ? -1 : 0}
-      className={`fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 grid size-16 place-items-center rounded-full bg-wa text-tinta shadow-[0_10px_24px_-8px_rgb(31_27_24/0.5)] transition-[transform,opacity,background-color] duration-300 ease-(--ease-salida) hover:bg-wa-hover active:scale-95 md:right-6 md:bottom-6 ${
-        tapa ? "pointer-events-none translate-y-6 scale-75 opacity-0" : "opacity-100"
+      tabIndex={tapa || !pasoInicio ? -1 : 0}
+      aria-hidden={!pasoInicio || undefined}
+      className={`fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 grid size-16 place-items-center rounded-full bg-wa text-tinta shadow-alta transition-[transform,opacity,background-color] duration-300 ease-(--ease-salida) hover:-translate-y-0.5 hover:bg-wa-hover active:scale-95 md:right-6 md:bottom-6 ${
+        tapa || !pasoInicio ? "pointer-events-none translate-y-6 scale-75 opacity-0" : "opacity-100"
       }`}
     >
       <IconoWhatsapp className="size-8" />

@@ -1,3 +1,22 @@
+import {
+  BriefcaseBusiness,
+  CalendarCheck,
+  Camera,
+  CircleCheck,
+  Clock,
+  HandCoins,
+  Images,
+  LayoutDashboard,
+  Link2,
+  MapPin,
+  MessageCircle,
+  Pencil,
+  Receipt,
+  Search,
+  Smartphone,
+  Tag,
+} from "lucide-react";
+
 type Props = { className?: string };
 
 export function IconoWhatsapp({ className = "size-5" }: Props) {
@@ -25,4 +44,30 @@ export function IconoInstagram({ className = "size-5" }: Props) {
       <circle cx="17.4" cy="6.6" r="0.6" fill="currentColor" />
     </svg>
   );
+}
+
+const lucide = {
+  charla: MessageCircle,
+  factura: Receipt,
+  listo: CircleCheck,
+  turno: CalendarCheck,
+  google: Search,
+  negocio: BriefcaseBusiness,
+  galeria: Images,
+  precios: Tag,
+  mapa: MapPin,
+  celu: Smartphone,
+  editar: Pencil,
+  fotos: Camera,
+  link: Link2,
+  sena: HandCoins,
+  panel: LayoutDashboard,
+  reloj: Clock,
+} as const;
+
+/** Ícono por nombre (los nombres que se usan en content/sitio.ts). */
+export function Icono({ nombre, className = "size-5" }: { nombre: string; className?: string }) {
+  if (nombre === "whatsapp") return <IconoWhatsapp className={className} />;
+  const C = lucide[nombre as keyof typeof lucide] ?? CircleCheck;
+  return <C className={className} aria-hidden="true" strokeWidth={1.75} />;
 }

@@ -22,7 +22,7 @@ This site sells that service. Its single goal: **the visitor writes to Damián o
 
 ## Positioning
 
-One person, local (Avellaneda, Buenos Aires), building simple pages for businesses and professionals. He handles everything: they send photos, info and prices, he delivers a working page in one week. Changes are welcome. Optional self-service booking with a Mercado Pago deposit going directly into their own account, for those who work with appointments (peluquerías, estética, consultorios, profes). No lock-in: cancel any time and the domain is transferred to their name.
+One person, local (Avellaneda, Buenos Aires), building simple pages for businesses and professionals. He handles everything: they send photos, info and prices, he shows a first version right away and delivers the finished page in a few days. Changes are welcome. Optional self-service booking with a Mercado Pago deposit going directly into their own account, for those who work with appointments (peluquerías, estética, consultorios, profes). No lock-in: cancel any time and the domain is transferred to their name.
 
 ## Operating Context
 
@@ -34,7 +34,7 @@ One person, local (Avellaneda, Buenos Aires), building simple pages for business
 
 - Plans (ARS): **"Tu página"** $150.000 once + $15.000/month (what they do, work or services, prices, location, WhatsApp, Instagram, own domain). **"Tu página + turnos"** $280.000 once + $30.000/month (everything above + clients book day/time on their own + deposit via Mercado Pago + panel to see bookings), aimed at those who work with appointments; marked "El más elegido".
 - Payment terms: half to start, half when they see it finished. Damián issues an invoice (factura).
-- Delivery: one week from receiving photos and info.
+- Delivery: never promise a fixed timeframe ("una semana", "7 días"). A first version the same day when there is room; finished in a few days.
 - Monthly fee covers domain, hosting and maintenance.
 - Live example (nails, fictional "Studio Mía" with sample data): https://landing-nails-mu.vercel.app. Other industries: "Más rubros · Muy pronto".
 - WhatsApp number and Instagram URL are placeholders pending from the owner.
@@ -44,8 +44,9 @@ One person, local (Avellaneda, Buenos Aires), building simple pages for business
 - Name: **Damián**. Tagline: "Páginas web". Use "clientes", never "clientas".
 - Voice: Argentine Spanish with voseo, simple, like talking to a friend. Nothing that sounds robotic or like an ad.
 - Banned words: landing, landing page, web app, responsive, SEO, optimizado, solución, potenciá, impulsá, transformá, "llevá tu negocio al siguiente nivel", digital, emprendedor/a.
-- Binding palette (set by owner): background cream #FAF7F2, text #1F1B18, warm gray #6B625B, terracotta accent #C2704F. WhatsApp green #25D366 **only** on WhatsApp buttons.
-- Binding type (set by owner): headings Fraunces (or Cormorant), body Inter (or DM Sans).
+- Binding palette (set by owner): base cream #FAF7F2, cream 2 #F3ECE3, warm white #FFFDF9; text #1F1B18, warm gray #6B625B; main accent terracotta #C2704F (hover #A85C3E). Soft support colors for card and icon backgrounds: peach #F6DCCB, sage #DDE5D6, sand #EFE3CF. Warm dark #2A2420 for one or two contrast areas. WhatsApp green #25D366 **only** on WhatsApp buttons. No color gradients (not even Instagram's), no more than 2 colors besides the base per section, no strong terracotta as a large background.
+- Binding type (set by owner): headings Newsreader (Fraunces was dropped: its "f" looked odd), body Inter. Caveat only for the hand-written signature.
+- Feel: warm, close, hand-made and tidy, like someone you trust. Rounded corners 16–28px, soft warm shadows, little text (max two lines per paragraph on phones), something visual in every section, no forced "creative" layouts (diagonals, staircases).
 
 ## Evidence on Hand
 

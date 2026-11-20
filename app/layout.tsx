@@ -1,12 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Caveat, Inter, Newsreader } from "next/font/google";
 import { sitio } from "@/content/sitio";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT"],
+  axes: ["opsz"],
+});
+
+// Solo para la firma a mano
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["600"],
 });
 
 const inter = Inter({
@@ -38,7 +45,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es-AR" className={`${fraunces.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="es-AR" className={`${newsreader.variable} ${inter.variable} ${caveat.variable}`} suppressHydrationWarning>
       <head>
         {/* Marca que hay JavaScript: recién ahí las secciones se esconden para aparecer suave */}
         <script

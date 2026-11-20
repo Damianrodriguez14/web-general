@@ -29,13 +29,13 @@ export default async function Image() {
           <div style={{ fontSize: 26, color: "#6b625b" }}>{`${sitio.rubro} · ${sitio.lugar}`}</div>
         </div>
         <div style={{ display: "flex", position: "relative", width: 330, marginLeft: 26, justifyContent: "center" }}>
-          <div style={{ position: "absolute", left: -10, right: -10, top: 20, bottom: -64, background: "#c2704f", borderTopLeftRadius: 200, borderTopRightRadius: 200 }} />
-          <div style={{ display: "flex", marginTop: 50, width: 250, height: 541, background: "#1f1b18", borderRadius: 38, padding: 8 }}>
+          <div style={{ position: "absolute", left: -10, right: -10, top: 20, bottom: -64, background: "#f6dccb", borderTopLeftRadius: 200, borderTopRightRadius: 200 }} />
+          <div style={{ display: "flex", marginTop: 50, width: 250, height: 541, background: "#2a2420", borderRadius: 38, padding: 8 }}>
             {captura ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={captura} width={234} height={506} style={{ borderRadius: 31, objectFit: "cover", objectPosition: "top" }} alt="" />
             ) : (
-              <div style={{ display: "flex", width: 234, height: 506, borderRadius: 31, background: "#f2ebe1" }} />
+              <div style={{ display: "flex", width: 234, height: 506, borderRadius: 31, background: "#f3ece3" }} />
             )}
           </div>
         </div>
